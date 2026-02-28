@@ -1057,6 +1057,104 @@
     .override-name { font-size: 14px; font-weight: 700; color: var(--text-primary); display: flex; align-items: center; gap: 5px; }
     .override-meta { font-size: 11.5px; color: var(--text-muted); margin-top: 2px; }
     .override-efp { font-size: 16px; font-weight: 800; color: var(--accent); flex-shrink: 0; }
+
+    /* ─── Tab 5: Form Centre ─────────────────────────────────── */
+    .form-sticky {
+      position: sticky; top: 0; z-index: 20;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 16px 12px;
+    }
+    .btn-form-scan {
+      width: 100%; background: var(--accent); border: none;
+      border-radius: 14px; padding: 16px 20px;
+      color: #000; font-size: 16px; font-weight: 800;
+      font-family: inherit; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      gap: 9px; letter-spacing: 0.2px; margin-bottom: 12px;
+    }
+    .btn-form-scan:active   { opacity: 0.85; transform: scale(0.98); }
+    .btn-form-scan:disabled { opacity: 0.45; cursor: not-allowed; transform: none; }
+    .btn-form-scan svg { width: 18px; height: 18px; }
+    .form-sort-bar { display: flex; gap: 7px; overflow-x: auto; padding-bottom: 2px; scrollbar-width: none; }
+    .form-sort-bar::-webkit-scrollbar { display: none; }
+    .sort-pill {
+      flex-shrink: 0; background: var(--bg-input); border: 1px solid var(--border);
+      border-radius: 20px; padding: 6px 13px;
+      font-size: 12px; font-weight: 700; color: var(--text-muted);
+      cursor: pointer; white-space: nowrap; font-family: inherit;
+      transition: color 0.15s, background 0.15s, border-color 0.15s;
+    }
+    .sort-pill.active { background: var(--accent-glow); border-color: var(--accent-border); color: var(--accent); }
+    .form-last-scan { text-align: center; font-size: 11px; color: var(--text-muted); padding: 8px 16px 0; min-height: 24px; }
+    .form-loading { padding: 36px 20px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+    .form-no-key {
+      margin: 20px 14px; padding: 24px 20px;
+      background: rgba(239,68,68,.08); border: 1px solid rgba(239,68,68,.25);
+      border-radius: 14px; display: flex; flex-direction: column;
+      align-items: center; gap: 12px; text-align: center;
+    }
+    .form-no-key svg { width: 36px; height: 36px; color: var(--danger); opacity: 0.7; }
+    .form-no-key p  { font-size: 14px; color: var(--text-secondary); line-height: 1.55; }
+    .form-no-key strong { color: var(--text-primary); }
+    .form-cards { padding: 14px; display: flex; flex-direction: column; gap: 10px; }
+    .form-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; transition: border-color 0.15s; }
+    .form-card.expanded { border-color: var(--accent-border); }
+    .form-card-head { padding: 13px; display: flex; align-items: center; gap: 11px; cursor: pointer; }
+    .form-rating-badge { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 17px; flex-shrink: 0; }
+    .form-player-info { flex: 1; min-width: 0; }
+    .form-player-name { font-size: 15px; font-weight: 700; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 3px; }
+    .form-player-meta { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+    .form-right { text-align: right; flex-shrink: 0; }
+    .form-efp { font-size: 20px; font-weight: 800; color: var(--accent); }
+    .form-efp-label { font-size: 9px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.3px; }
+    .form-trend { font-size: 16px; }
+    .verdict-badge { font-size: 10px; font-weight: 800; padding: 3px 9px; border-radius: 5px; letter-spacing: 0.4px; white-space: nowrap; }
+    .verdict-start   { background: rgba(34,197,94,.18); color: #22c55e; }
+    .verdict-bench   { background: rgba(234,179,8,.15);  color: #fbbf24; }
+    .verdict-monitor { background: rgba(249,115,22,.15); color: #fb923c; }
+    .verdict-trade   { background: rgba(239,68,68,.15);  color: #ef4444; }
+    .form-card-detail { display: none; padding: 0 13px 13px; border-top: 1px solid var(--border); }
+    .form-card.expanded .form-card-detail { display: block; }
+    .form-detail-row { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid var(--border); font-size: 13px; }
+    .form-detail-row:last-child { border-bottom: none; }
+    .form-detail-label { color: var(--text-muted); font-weight: 500; }
+    .form-detail-value { color: var(--text-primary); font-weight: 600; text-align: right; max-width: 60%; }
+    .form-role-note { margin-top: 10px; padding: 8px 11px; background: rgba(249,115,22,.08); border: 1px solid rgba(249,115,22,.25); border-radius: 8px; font-size: 12px; color: #fb923c; }
+    .form-reason { margin-top: 10px; padding: 8px 11px; background: var(--bg-input); border-radius: 8px; font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+    /* ─── Tab 6: Settings ────────────────────────────────────── */
+    .settings-body { padding: 18px 16px; display: flex; flex-direction: column; gap: 22px; }
+    .settings-section { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+    .settings-section-title { font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: var(--text-muted); padding: 14px 16px 10px; border-bottom: 1px solid var(--border); }
+    .settings-row { padding: 14px 16px; border-bottom: 1px solid var(--border); }
+    .settings-row:last-child { border-bottom: none; }
+    .settings-row-label { font-size: 14px; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+    .settings-row-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 10px; line-height: 1.4; }
+    .api-key-wrap { display: flex; gap: 8px; align-items: stretch; }
+    .api-key-input-wrap { position: relative; flex: 1; }
+    .api-key-input { width: 100%; background: var(--bg-input); border: 1px solid var(--border); border-radius: 11px; padding: 12px 42px 12px 14px; color: var(--text-primary); font-size: 15px; font-family: inherit; outline: none; }
+    .api-key-input:focus { border-color: var(--accent-border); }
+    .api-key-toggle { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none; color: var(--text-muted); cursor: pointer; display: flex; align-items: center; }
+    .api-key-toggle svg { width: 17px; height: 17px; }
+    .btn-settings-save { background: var(--accent); border: none; border-radius: 11px; padding: 12px 18px; color: #000; font-size: 14px; font-weight: 800; font-family: inherit; cursor: pointer; white-space: nowrap; }
+    .btn-settings-save:active { opacity: 0.85; }
+    .round-stepper { display: flex; align-items: center; gap: 14px; }
+    .round-stepper-val { font-size: 22px; font-weight: 800; color: var(--accent); min-width: 42px; text-align: center; }
+    .btn-step { width: 38px; height: 38px; background: var(--bg-input); border: 1px solid var(--border); border-radius: 10px; color: var(--text-secondary); display: flex; align-items: center; justify-content: center; cursor: pointer; flex-shrink: 0; }
+    .btn-step:active { background: var(--accent-glow); border-color: var(--accent-border); color: var(--accent); }
+    .btn-step svg { width: 18px; height: 18px; }
+    .btn-settings-action { width: 100%; background: var(--bg-input); border: 1px solid var(--border); border-radius: 11px; padding: 13px 16px; color: var(--text-secondary); font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer; text-align: left; display: flex; align-items: center; gap: 10px; }
+    .btn-settings-action:active { background: var(--accent-glow); border-color: var(--accent-border); color: var(--accent); }
+    .btn-settings-action svg { width: 17px; height: 17px; flex-shrink: 0; }
+    .btn-settings-danger { width: 100%; background: var(--danger-glow); border: 1px solid rgba(239,68,68,.3); border-radius: 11px; padding: 13px 16px; color: var(--danger); font-size: 14px; font-weight: 700; font-family: inherit; cursor: pointer; text-align: left; display: flex; align-items: center; gap: 10px; }
+    .btn-settings-danger:active { opacity: 0.8; }
+    .btn-settings-danger svg { width: 17px; height: 17px; flex-shrink: 0; }
+    .about-version { font-size: 13px; color: var(--text-muted); margin-bottom: 14px; }
+    .about-workflow { display: flex; flex-direction: column; gap: 8px; }
+    .workflow-step { display: flex; gap: 11px; align-items: flex-start; }
+    .workflow-num { width: 22px; height: 22px; border-radius: 50%; background: var(--accent-glow); border: 1px solid var(--accent-border); color: var(--accent); font-size: 11px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+    .workflow-text { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
   </style>
 </head>
 <body>
@@ -1207,32 +1305,174 @@
       </div>
     </div>
 
-    <!-- Tab 5: Trades ─────────────────────────────────────── -->
-    <div id="tab-trades" class="tab-panel">
-      <div class="placeholder-content">
-        <div class="ph-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M7 16V4m0 0L3 8m4-4 4 4"/>
-            <path d="M17 8v12m0 0 4-4m-4 4-4-4"/>
+    <!-- Tab 5: Form Centre ─────────────────────────────────── -->
+    <div id="tab-form" class="tab-panel">
+
+      <div class="form-sticky">
+        <button class="btn-form-scan" id="btn-form-scan" onclick="runFormScan()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
           </svg>
+          Run Full Form Scan
+        </button>
+        <div class="form-sort-bar">
+          <button class="sort-pill active" data-sort="efp"      onclick="setFormSort(this)">EFP ↓</button>
+          <button class="sort-pill"        data-sort="rating"   onclick="setFormSort(this)">Form Rating</button>
+          <button class="sort-pill"        data-sort="position" onclick="setFormSort(this)">Position</button>
+          <button class="sort-pill"        data-sort="name"     onclick="setFormSort(this)">Name</button>
         </div>
-        <h2>Trades</h2>
-        <p>Manage your trade window and swap players in and out of your squad.</p>
-        <div class="coming-soon">Coming Soon</div>
       </div>
+
+      <div class="form-last-scan" id="form-last-scan"></div>
+
+      <div id="form-no-key" class="form-no-key" style="display:none">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p>No API key found. Add your Anthropic API key in <strong>Settings</strong> to use Form Scan.</p>
+      </div>
+
+      <div id="form-loading" class="form-loading" style="display:none">
+        <div class="loading-spinner"></div>
+        <div class="loading-msg" id="form-loading-msg">Preparing form scan…</div>
+        <div class="loading-progress-bar">
+          <div class="loading-progress-fill" id="form-loading-fill" style="width:0%"></div>
+        </div>
+      </div>
+
+      <div id="form-cards" class="form-cards"></div>
+
     </div>
 
-    <!-- Tab 6: Standings ──────────────────────────────────── -->
-    <div id="tab-standings" class="tab-panel">
-      <div class="placeholder-content">
-        <div class="ph-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
-          </svg>
+    <!-- Tab 6: Settings ───────────────────────────────────── -->
+    <div id="tab-settings" class="tab-panel">
+      <div class="settings-body">
+
+        <!-- API Key -->
+        <div class="settings-section">
+          <div class="settings-section-title">API Key</div>
+          <div class="settings-row">
+            <div class="settings-row-label">Anthropic API Key</div>
+            <div class="settings-row-sub">Stored locally on your device only. Never sent anywhere except directly to Anthropic's API.</div>
+            <div class="api-key-wrap">
+              <div class="api-key-input-wrap">
+                <input type="password" class="api-key-input" id="settings-api-key"
+                  placeholder="sk-ant-api03-…" autocomplete="off" autocorrect="off">
+                <button class="api-key-toggle" onclick="toggleApiKey()" aria-label="Show/hide key">
+                  <svg id="eye-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </button>
+              </div>
+              <button class="btn-settings-save" onclick="saveApiKey()">Save</button>
+            </div>
+          </div>
         </div>
-        <h2>Ladder</h2>
-        <p>See the league standings and track how you rank against your competition.</p>
-        <div class="coming-soon">Coming Soon</div>
+
+        <!-- Round Management -->
+        <div class="settings-section">
+          <div class="settings-section-title">Round Management</div>
+          <div class="settings-row">
+            <div class="settings-row-label">Current Round</div>
+            <div class="settings-row-sub">Used by Auto Team Picker and Form Scan.</div>
+            <div class="round-stepper">
+              <button class="btn-step" onclick="settingsChangeRound(-1)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+              </button>
+              <div class="round-stepper-val" id="settings-round-val">1</div>
+              <button class="btn-step" onclick="settingsChangeRound(1)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Squad Management -->
+        <div class="settings-section">
+          <div class="settings-section-title">Squad Management</div>
+          <div class="settings-row">
+            <button class="btn-settings-action" onclick="exportSquadJSON()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              Export Squad to JSON
+            </button>
+          </div>
+          <div class="settings-row">
+            <button class="btn-settings-action" onclick="importSquadJSON()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+              Import Squad from JSON
+            </button>
+          </div>
+        </div>
+
+        <!-- Data Reset -->
+        <div class="settings-section">
+          <div class="settings-section-title">Data Reset</div>
+          <div class="settings-row">
+            <button class="btn-settings-danger" onclick="settingsConfirm('Clear Round Team?','Removes the selected team for the current round only.','Clear Team',clearCurrentTeam)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              </svg>
+              Clear This Round's Team Selection
+            </button>
+          </div>
+          <div class="settings-row">
+            <button class="btn-settings-danger" onclick="settingsConfirm('Reset Trade Counter?','This will set your used trades back to zero.','Reset Trades',resetTradeCounter)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4"/>
+              </svg>
+              Reset Trade Counter to 0
+            </button>
+          </div>
+          <div class="settings-row">
+            <button class="btn-settings-danger" onclick="settingsConfirm('Full Reset — delete ALL data?','This cannot be undone. All squad, team and settings will be wiped.','Full Reset',fullAppReset)">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="3 6 5 6 21 6"/>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2"/>
+              </svg>
+              Full Reset — Clear All App Data
+            </button>
+          </div>
+        </div>
+
+        <!-- About -->
+        <div class="settings-section">
+          <div class="settings-section-title">About</div>
+          <div class="settings-row">
+            <div class="about-version">Fantasy NRL · Version 1.0</div>
+            <div style="font-size:11px;font-weight:800;letter-spacing:0.7px;text-transform:uppercase;color:var(--text-muted);margin-bottom:10px">Weekly Workflow</div>
+            <div class="about-workflow">
+              <div class="workflow-step">
+                <div class="workflow-num">1</div>
+                <div class="workflow-text"><strong>Thursday:</strong> Run Full Form Scan + Auto Team Picker after NRL team lists drop</div>
+              </div>
+              <div class="workflow-step">
+                <div class="workflow-num">2</div>
+                <div class="workflow-text">Review recommended team and override any picks if needed</div>
+              </div>
+              <div class="workflow-step">
+                <div class="workflow-num">3</div>
+                <div class="workflow-text">Lock in your team before the weekend deadline</div>
+              </div>
+              <div class="workflow-step">
+                <div class="workflow-num">4</div>
+                <div class="workflow-text"><strong>Sunday/Monday:</strong> Enter scores in Score Tracker</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -1272,17 +1512,19 @@
       </svg>
       Stats
     </button>
-    <button class="nav-item" onclick="showTab('trades', this)">
+    <button class="nav-item" onclick="showTab('form', this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4"/>
+        <path d="M9 11l3 3L22 4"/>
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
       </svg>
-      Trades
+      Form
     </button>
-    <button class="nav-item" onclick="showTab('standings', this)">
+    <button class="nav-item" onclick="showTab('settings', this)">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
       </svg>
-      Ladder
+      Settings
     </button>
   </nav>
 </div>
@@ -1389,6 +1631,25 @@
   </div>
 </div>
 
+<!-- ── Settings Action Confirm ───────────────────────────────── -->
+<div class="confirm-overlay" id="settings-confirm" onclick="if(event.target===this)settingsConfirmClose()">
+  <div class="confirm-box">
+    <div class="confirm-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+    </div>
+    <div class="confirm-title" id="sc-title">Are you sure?</div>
+    <div class="confirm-msg"   id="sc-msg">This action cannot be undone.</div>
+    <div class="confirm-actions">
+      <button class="btn-confirm-cancel" onclick="settingsConfirmClose()">Cancel</button>
+      <button class="btn-confirm-del"    id="sc-btn" onclick="settingsConfirmDo()">Confirm</button>
+    </div>
+  </div>
+</div>
+
 <!-- ── Toast ─────────────────────────────────────────────────── -->
 <div class="toast" id="toast"></div>
 
@@ -1476,7 +1737,9 @@ function showTab(name, btn) {
   document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
   document.getElementById('tab-' + name).classList.add('active');
   btn.classList.add('active');
-  if (name === 'team') initTeamTab();
+  if (name === 'team')     initTeamTab();
+  if (name === 'form')     initFormTab();
+  if (name === 'settings') initSettingsTab();
 }
 
 /* ============================================================
@@ -2279,6 +2542,315 @@ function saveTeam() {
   localStorage.setItem('fnrl_current_round', String(teamRound));
 
   showToast(`Round ${teamRound} team saved (${count}/17 slots filled)`);
+}
+
+/* ============================================================
+   TAB 5 — FORM CENTRE
+   ============================================================ */
+
+let formSortMode = 'efp';
+
+function initFormTab() {
+  const settings = JSON.parse(localStorage.getItem('fnrl_settings') || '{}');
+  document.getElementById('form-no-key').style.display = settings.apiKey ? 'none' : 'flex';
+  updateFormLastScan();
+  renderFormCards();
+}
+
+function setFormSort(btn) {
+  document.querySelectorAll('.sort-pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  formSortMode = btn.dataset.sort;
+  renderFormCards();
+}
+
+function formRatingSymbol(player) {
+  const r      = player.formRating || 0;
+  const status = player.availabilityStatus || '';
+  const named  = player.named || '';
+  if (status === 'injured' || status === 'suspended' || named === 'omitted') return '⚫';
+  if (r >= 7) return '🟢';
+  if (r >= 5) return '🟡';
+  if (r >= 1) return '🔴';
+  return '⚫';
+}
+
+function formVerdict(player) {
+  const sym    = formRatingSymbol(player);
+  const status = player.availabilityStatus || '';
+  const named  = player.named || '';
+  if (status === 'injured' || status === 'suspended' || named === 'omitted')
+    return { label: 'TRADE CANDIDATE', cls: 'verdict-trade' };
+  if (sym === '🟢' && named === 'starting') return { label: 'START',            cls: 'verdict-start' };
+  if (sym === '🟡')                         return { label: 'MONITOR',          cls: 'verdict-monitor' };
+  if (sym === '🔴')                         return { label: 'BENCH',            cls: 'verdict-bench' };
+  if (sym === '⚫')                         return { label: 'TRADE CANDIDATE',  cls: 'verdict-trade' };
+  return { label: 'START', cls: 'verdict-start' };
+}
+
+function sortedFormSquad() {
+  const s = squad.slice();
+  if      (formSortMode === 'efp')      s.sort((a, b) => (b.expectedFantasyPoints || 0) - (a.expectedFantasyPoints || 0));
+  else if (formSortMode === 'rating')   s.sort((a, b) => (b.formRating || 0) - (a.formRating || 0));
+  else if (formSortMode === 'position') s.sort((a, b) => POS_ORDER[primaryPos(a.positions)] - POS_ORDER[primaryPos(b.positions)]);
+  else if (formSortMode === 'name')     s.sort((a, b) => a.name.localeCompare(b.name));
+  return s;
+}
+
+function renderFormCards() {
+  const container = document.getElementById('form-cards');
+  if (!container) return;
+  const sorted = sortedFormSquad();
+
+  if (sorted.length === 0) {
+    container.innerHTML = `<div class="empty-state" style="padding:48px 24px">
+      <p>No players in squad</p><small>Add players in the Squad tab first</small></div>`;
+    return;
+  }
+
+  container.innerHTML = sorted.map(p => {
+    const sym     = formRatingSymbol(p);
+    const verdict = formVerdict(p);
+    const efp     = Math.round(p.expectedFantasyPoints || estimateEFP(p));
+    const trend   = p.trend || '';
+    const scores  = Array.isArray(p.lastFiveScores) ? p.lastFiveScores.join(', ') : '—';
+    const mins    = p.avgMinutes ? p.avgMinutes + ' min' : '—';
+    const pos     = primaryPos(p.positions);
+    const posCls  = POS_CSS[pos] || '';
+    const roleNote    = (p.named === 'bench')
+      ? `<div class="form-role-note">⚠️ ${esc(p.reason || 'Named on bench')}</div>` : '';
+    const reasonBlock = p.reason
+      ? `<div class="form-reason">${esc(p.reason)}</div>` : '';
+    const scannedAt = p.lastScanned
+      ? new Date(p.lastScanned).toLocaleString('en-AU', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })
+      : 'Not yet scanned';
+
+    return `
+    <div class="form-card" id="fcard-${p.id}" onclick="toggleFormCard('${p.id}')">
+      <div class="form-card-head">
+        <div class="form-rating-badge">${sym}</div>
+        <div class="form-player-info">
+          <div class="form-player-name">${esc(p.name)}</div>
+          <div class="form-player-meta">
+            <span class="pos-badge ${posCls}">${esc(pos)}</span>
+            <span class="player-team">${esc(p.nrlTeam)}</span>
+            <span class="verdict-badge ${verdict.cls}">${verdict.label}</span>
+          </div>
+        </div>
+        <div class="form-right">
+          <div class="form-efp">${efp}</div>
+          <div class="form-efp-label">EFP</div>
+          <div class="form-trend">${trend}</div>
+        </div>
+      </div>
+      <div class="form-card-detail">
+        <div class="form-detail-row">
+          <span class="form-detail-label">Last 5 Scores</span>
+          <span class="form-detail-value">${esc(scores)}</span>
+        </div>
+        <div class="form-detail-row">
+          <span class="form-detail-label">Avg Minutes</span>
+          <span class="form-detail-value">${esc(mins)}</span>
+        </div>
+        <div class="form-detail-row">
+          <span class="form-detail-label">Status</span>
+          <span class="form-detail-value">${esc(p.availabilityStatus || 'unknown')} · ${esc(p.named || 'unknown')}</span>
+        </div>
+        <div class="form-detail-row">
+          <span class="form-detail-label">Opponent Strength</span>
+          <span class="form-detail-value">${esc(p.opponentStrength || '—')}</span>
+        </div>
+        <div class="form-detail-row">
+          <span class="form-detail-label">Last Scanned</span>
+          <span class="form-detail-value">${esc(scannedAt)}</span>
+        </div>
+        ${roleNote}${reasonBlock}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleFormCard(id) {
+  const el = document.getElementById('fcard-' + id);
+  if (el) el.classList.toggle('expanded');
+}
+
+function updateFormLastScan() {
+  const el = document.getElementById('form-last-scan');
+  if (!el) return;
+  const times = squad.filter(p => p.lastScanned).map(p => new Date(p.lastScanned).getTime());
+  if (times.length > 0) {
+    const latest = new Date(Math.max(...times));
+    el.textContent = 'Last scan: '
+      + latest.toLocaleDateString('en-AU', { weekday: 'short', day: 'numeric', month: 'short' })
+      + ' at ' + latest.toLocaleTimeString('en-AU', { hour: '2-digit', minute: '2-digit' });
+  } else {
+    el.textContent = 'No scan run yet — tap "Run Full Form Scan" to begin';
+  }
+}
+
+async function runFormScan() {
+  const settings = JSON.parse(localStorage.getItem('fnrl_settings') || '{}');
+  const apiKey = settings.apiKey || '';
+  if (!apiKey) {
+    document.getElementById('form-no-key').style.display = 'flex';
+    return;
+  }
+  document.getElementById('form-no-key').style.display  = 'none';
+  document.getElementById('form-loading').style.display = 'flex';
+  document.getElementById('form-cards').style.display   = 'none';
+  document.getElementById('btn-form-scan').disabled     = true;
+  const round = parseInt(localStorage.getItem('fnrl_current_round') || '1');
+
+  try {
+    const scanned = squad.map(p => ({ ...p }));
+    for (let i = 0; i < scanned.length; i++) {
+      const pct = Math.round(5 + (i / scanned.length) * 90);
+      document.getElementById('form-loading-msg').textContent =
+        `Scanning ${scanned[i].name}… (${i + 1} of ${scanned.length})`;
+      document.getElementById('form-loading-fill').style.width = pct + '%';
+      try {
+        const result = await scanPlayer(scanned[i], apiKey, round);
+        scanned[i] = { ...scanned[i], ...result };
+      } catch (err) {
+        scanned[i] = { ...scanned[i],
+          availabilityStatus: 'unknown', named: 'unknown', formRating: 0, trend: '→',
+          expectedFantasyPoints: estimateEFP(scanned[i]),
+          reason: 'Scan failed — using estimate', lastScanned: new Date().toISOString(),
+        };
+      }
+    }
+    scanned.forEach(p => {
+      const idx = squad.findIndex(s => s.id === p.id);
+      if (idx !== -1) squad[idx] = p;
+    });
+    persistSquad();
+    document.getElementById('form-loading-msg').textContent = 'Scan complete! ✅';
+    document.getElementById('form-loading-fill').style.width = '100%';
+    await tick(500);
+    document.getElementById('form-loading').style.display = 'none';
+    document.getElementById('form-cards').style.display   = '';
+    updateFormLastScan();
+    renderFormCards();
+    showToast('Form scan complete!');
+  } catch (err) {
+    document.getElementById('form-loading').style.display = 'none';
+    document.getElementById('form-cards').style.display   = '';
+    showToast('Error: ' + (err.message || 'Form scan failed'));
+  } finally {
+    document.getElementById('btn-form-scan').disabled = false;
+  }
+}
+
+/* ============================================================
+   TAB 6 — SETTINGS
+   ============================================================ */
+
+let settingsConfirmCallback = null;
+
+function initSettingsTab() {
+  const settings = JSON.parse(localStorage.getItem('fnrl_settings') || '{}');
+  const keyInput = document.getElementById('settings-api-key');
+  if (keyInput) keyInput.value = settings.apiKey || '';
+  const round = parseInt(localStorage.getItem('fnrl_current_round') || '1');
+  const valEl = document.getElementById('settings-round-val');
+  if (valEl) valEl.textContent = round;
+}
+
+function toggleApiKey() {
+  const input = document.getElementById('settings-api-key');
+  if (!input) return;
+  const isHidden = input.type === 'password';
+  input.type = isHidden ? 'text' : 'password';
+  document.getElementById('eye-icon').innerHTML = isHidden
+    ? '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>'
+    : '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+}
+
+function saveApiKey() {
+  const val = (document.getElementById('settings-api-key').value || '').trim();
+  const settings = JSON.parse(localStorage.getItem('fnrl_settings') || '{}');
+  settings.apiKey = val;
+  localStorage.setItem('fnrl_settings', JSON.stringify(settings));
+  showToast(val ? 'API key saved' : 'API key cleared');
+}
+
+function settingsChangeRound(delta) {
+  let round = parseInt(localStorage.getItem('fnrl_current_round') || '1');
+  round = Math.max(1, round + delta);
+  localStorage.setItem('fnrl_current_round', String(round));
+  const valEl = document.getElementById('settings-round-val');
+  if (valEl) valEl.textContent = round;
+  if (typeof teamRound !== 'undefined') {
+    teamRound = round;
+    const numEl = document.getElementById('team-round-num');
+    if (numEl) numEl.textContent = round;
+  }
+  showToast('Round set to ' + round);
+}
+
+function exportSquadJSON() {
+  const data = JSON.stringify(squad, null, 2);
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(data)
+      .then(() => showToast('Squad copied to clipboard'))
+      .catch(() => prompt('Copy this squad JSON:', data));
+  } else {
+    prompt('Copy this squad JSON:', data);
+  }
+}
+
+function importSquadJSON() {
+  const raw = prompt('Paste squad JSON to import:');
+  if (!raw) return;
+  try {
+    const imported = JSON.parse(raw);
+    if (!Array.isArray(imported)) throw new Error('Not an array');
+    squad = imported;
+    persistSquad();
+    renderSquad();
+    showToast('Squad imported (' + squad.length + ' players)');
+  } catch (e) {
+    showToast('Invalid JSON — import failed');
+  }
+}
+
+function clearCurrentTeam() {
+  const round = parseInt(localStorage.getItem('fnrl_current_round') || '1');
+  const all = JSON.parse(localStorage.getItem('fnrl_team_selections') || '{}');
+  delete all[round];
+  localStorage.setItem('fnrl_team_selections', JSON.stringify(all));
+  if (typeof teamSelections !== 'undefined') { teamSelections = {}; teamKicker = null; autoGenTime = null; }
+  showToast('Round ' + round + ' team cleared');
+}
+
+function resetTradeCounter() {
+  localStorage.setItem('fnrl_trades_used', '0');
+  showToast('Trade counter reset to 0');
+}
+
+function fullAppReset() {
+  localStorage.clear();
+  showToast('All data cleared — reloading…');
+  setTimeout(() => location.reload(), 900);
+}
+
+function settingsConfirm(title, msg, btnLabel, callback) {
+  settingsConfirmCallback = callback;
+  document.getElementById('sc-title').textContent = title;
+  document.getElementById('sc-msg').textContent   = msg;
+  document.getElementById('sc-btn').textContent   = btnLabel;
+  document.getElementById('settings-confirm').classList.add('open');
+}
+
+function settingsConfirmClose() {
+  document.getElementById('settings-confirm').classList.remove('open');
+  settingsConfirmCallback = null;
+}
+
+function settingsConfirmDo() {
+  if (settingsConfirmCallback) settingsConfirmCallback();
+  settingsConfirmClose();
 }
 </script>
 </body>
