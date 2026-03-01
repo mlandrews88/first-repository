@@ -455,7 +455,7 @@
       inset: 0;
       background: rgba(0,0,0,.72);
       z-index: 100;
-      display: flex;
+      display: none;
       align-items: flex-end;
       justify-content: center;
       opacity: 0;
@@ -464,6 +464,7 @@
     }
 
     .modal-overlay.open {
+      display: flex;
       opacity: 1;
       pointer-events: all;
     }
@@ -656,7 +657,7 @@
       inset: 0;
       background: rgba(0,0,0,.72);
       z-index: 110;
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       padding: 20px;
@@ -665,7 +666,7 @@
       transition: opacity 0.2s;
     }
 
-    .confirm-overlay.open { opacity: 1; pointer-events: all; }
+    .confirm-overlay.open { display: flex; opacity: 1; pointer-events: all; }
 
     .confirm-box {
       background: var(--bg-secondary);
